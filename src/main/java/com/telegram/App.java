@@ -10,15 +10,15 @@ import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        ApiContextInitializer.init();
-        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
-        try {
-            telegramBotsApi.registerBot(Bot.getBot());
-        } catch (TelegramApiRequestException e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void main( String[] args )
+//    {
+//        System.out.println( "Hello World!" );
+//        ApiContextInitializer.init();
+//        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
+//        try {
+//            telegramBotsApi.registerBot(Bot.getBot());
+//        } catch (TelegramApiRequestException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
