@@ -1,7 +1,5 @@
 package com.telegram;
 
-import org.telegram.telegrambots.ApiContextInitializer;
-import org.telegram.telegrambots.TelegramBotsApi;
 import org.telegram.telegrambots.api.methods.AnswerCallbackQuery;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
@@ -12,26 +10,16 @@ import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButto
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
-import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public  class Bot extends TelegramLongPollingBot {
+public class Bot extends TelegramLongPollingBot {
 
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        ApiContextInitializer.init();
-        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
-        try {
-            telegramBotsApi.registerBot(new Bot());
-        } catch (TelegramApiRequestException e) {
-            e.printStackTrace();
-        }
+    static Bot getBot() {
+        return new Bot();
     }
-
 
 
 
